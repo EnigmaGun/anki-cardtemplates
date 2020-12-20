@@ -1,0 +1,83 @@
+.card {
+ font-family: arial;
+ font-size: 20px;
+ text-align: center;
+ color: #705849;
+ background-color: white;
+}
+
+.background{
+	background: url(_pergament.jpg) repeat center center fixed; 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100; 
+   overflow:auto; 
+}
+
+.trick-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width:90%;
+  font-size: 30px;
+  text-align: center;
+  color: #705849;
+  font-weight: bold;
+}
+
+.trick-description-title{
+  font-weight:bold;
+ color: #482b19;
+}
+
+.trick-description{
+   color: #482b19;
+   margin-bottom:10px;
+}
+
+.video-entry{
+  width:90%;
+  border: 2px solid #2c1b10;
+  border-radius: .25em;
+  padding: 5px;
+  margin-top: 5px
+}
+
+.video-entry-label{
+  width: 300px;
+  padding: 10px;
+  background-color: rgba(111,41,97,.3);
+  border: 2px solid rgba(111,41,97,.5);
+  display: inline-block;
+  vertical-align: middle
+}
+
+.icon-video{
+   background: url(_video.png) no-repeat;
+   width: 64px;
+   height: 64px;
+   border: none;  
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.icon-youtube{
+   background: url(_youtube.png) no-repeat;
+   width: 64px;
+   height: 64px;
+   border: none;  
+   display: inline-block;
+   vertical-align: middle;
+}
+
+/*Start of style added by resize image add-on. Don't edit directly or the edition will be lost. Edit via the add-on configuration */
+.mobile .card img {height:unset  !important; width:unset  !important;}
+/*End of style added by resize image add-on*/
+
+
+
+

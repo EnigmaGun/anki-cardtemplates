@@ -1,0 +1,45 @@
+<div class="background">
+    <div class="trick-description-title">{{Vorderseite}}</div>
+    <hr id="answer" />
+    <div class="trick-description-title">Beschreibung:</div>
+    <div class="trick-description">{{Rückseite}}</div>
+    <div>Videos:</div>
+    {{#YoutubeUrl1}}
+    <div class="video-entry">
+        <div class="video-entry-label">{{YoutubeLabel1}}</div>
+        <div class="icon-youtube" onclick='startVideo("{{YoutubeLabel1}}","http://www.youtube.com/embed/{{YoutubeUrl1}}");'></div>
+    </div>
+    {{/YoutubeUrl1}} {{#YoutubeUrl2}}
+    <div class="video-entry">
+        <div class="video-entry-label">{{YoutubeLabel2}}</div>
+        <div class="icon-youtube" onclick='startVideo("{{YoutubeLabel2}}","http://www.youtube.com/embed/{{YoutubeUrl2}}");'></div>
+    </div>
+    {{/YoutubeUrl2}} {{#VideoUrl1}}
+    <div class="video-entry">
+        <div class="video-entry-label">{{VideoLabel1}}</div>
+        <div class="icon-video" onclick='startVideo("{{VideoLabel1}}","{{VideoUrl1}}");'></div>
+    </div>
+    {{/VideoUrl1}} {{#VideoUrl2}}
+    <div class="video-entry">
+        <div class="video-entry-label">{{VideoLabel2}}</div>
+        <div class="icon-video" onclick='startVideo("{{VideoLabel2}}","{{VideoUrl2}}");'></div>
+    </div>
+    {{/VideoUrl2}}
+    <div id="videoContainer" style="position: relative; width: 100%; height: 0px; padding-bottom: 56.25%; margin-top: 20px; display: none;">
+        <iframe id="video" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;" allowfullscreen src=""> </iframe>
+    </div>
+    <div class="trick-description-title">Links:</div>
+    <div class="trick-description">{{Links}}</div>
+</div>
+<script>
+    function startVideo(label, url) {
+        try {
+            var container = document.getElementById("videoContainer");
+            var video = document.getElementById("video");
+            container.style.display = "block";
+            video.src = url;
+        } catch (e) {
+            alert(e);
+        }
+    }
+</script>
