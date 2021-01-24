@@ -20,7 +20,7 @@
 <script>
 	
 	function getEntries(total){
-		var cleaned = total.replace(/(?:\r\n|\r|\n)/g, '|');
+		var cleaned = total.replace(/(?:\r\n|\r|\n)/g, '');
 		var entries = cleaned.split("|");
 
      	return entries;
